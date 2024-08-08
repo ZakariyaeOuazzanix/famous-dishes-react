@@ -1,10 +1,9 @@
-
-export default function Image({srcImg, altImg}){
+export default function Image({url, altImg}){
 
   return (
-    <div className="w-fit h-fit">
-    <img src={srcImg} alt={altImg} className="max-h-[60vh]"/>
 
-    </div>
+    <>
+      <img src={url} alt={altImg} className="max-h-[60vh]"/>
+    </>
   );
 }

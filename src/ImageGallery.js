@@ -1,4 +1,4 @@
-import Image from "./Image";
+import Images from "./Images";
 import ImageNumber from "./ImageNumber";
 import ImageTitle from "./ImageTitle";
 import NextButton from "./NextButton";
@@ -13,7 +13,7 @@ const [currentDish, setcurrentDish] = useState(0);
 
 return(
     <>
-      <div className="p-5 w-[90vw] rounded-lg bg-gray-50 mx-auto my-5 shadow-xl lg:w-[700px] md:w-[570px]">
+      <div className="p-5 w-[90vw] rounded-lg bg-gray-50 mx-auto my-5 shadow-lg lg:w-[700px] md:w-[570px]">
 
         <div className="flex items-start justify-between">
           <BackButton currentDish={currentDish} setcurrentDish={setcurrentDish} totalDishes={dishesList.length}/>
@@ -24,7 +24,7 @@ return(
           <ImageTitle name = {dishesList[currentDish].name} origin={dishesList[currentDish].origin}/>
           <ImageNumber imageNumber={currentDish +1} totalDishes={dishesList.length}/>
           <ShowDetailsBtn details={dishesList[currentDish].description}/>
-          <Image srcImg={dishesList[currentDish].url} altImg={dishesList[currentDish].alt}/>
+          <Images urls={dishesList[currentDish].urls} altImg={dishesList[currentDish].alt} currentDish={currentDish}/>
         </div>
         
 
